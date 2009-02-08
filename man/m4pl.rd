@@ -148,8 +148,8 @@
 # Generation of theta values by rm4pl()
 # ... Exemple 01 - A 4pl() equivalent distribution must be recovered when a=1.702
  res   <- rm4pl(N=1000)
- stats <- c(mean=mean(res), sd=sd(res), skewness=skewness(res),
-            kurtosis=3-kurtosis(res))
+ stats <- c(mean=sapply(res, mean), sd=sapply(res, sd), skewness=sapply(res, skewness),
+            kurtosis=3-sapply(res, kurtosis))
  print(stats)
  # pdf of this distribution
  theta   <- seq(-4,4,length=100); C=rep(0,N); D=rep(0,N)
@@ -163,7 +163,8 @@
  C     <- 0.00
  D     <- 0.90
  res   <- rm4pl(N=1000, S=S, C=C, D=D)
- stats <- c(mean=mean(res), sd=sd(res), skewness=skewness(res), kurtosis=3-kurtosis(res))
+ stats <- c(mean=sapply(res, mean), sd=sapply(res, sd), skewness=sapply(res, skewness),
+            kurtosis=3-sapply(res, kurtosis))
  print(stats)
  # pdf of this distribution
  theta   <- seq(-4,4,length=100)

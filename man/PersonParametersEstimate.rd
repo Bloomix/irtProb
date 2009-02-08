@@ -162,7 +162,7 @@
  personLL         <- matrix(unlist(lapply(tests,extract,4)),nrow=rep)
  results          <- data.frame(Parameter=personParameters, Se=personSe,
                                 LL=personLL)
- round(c(mean=mean(results, na.rm=TRUE)),2); round(c(se=sd(results, na.rm=TRUE)),2)
+ round(c(mean=sapply(results, mean, na.rm=TRUE)),2); round(c(se=sapply(results, sd, na.rm=TRUE)),2)
 
 ## Model integrating the parameters theta and C
  # Same response patterns for comparison of estimates
@@ -175,11 +175,11 @@
  personLL         <- t(matrix(unlist(lapply(tests,extract,4)),ncol=rep))
  results          <- data.frame(Parameter=personParameters, Se=personSe,
                                 LL=personLL)
- round(c(mean=mean(results, na.rm=TRUE)),2); round(c(se=sd(results, na.rm=TRUE)),2)
+ round(c(mean=sapply(results, mean, na.rm=TRUE)),2); round(c(se=sapply(results, sd, na.rm=TRUE)),2)
  ## Average correlation between the person parameters
  nParameters <- length(personParameters[1,])
  personCor   <- unlist(lapply(tests,extract,3))
- personCor   <- matrix( mean(data.frame(t(matrix(personCor,ncol=rep))), na.rm=TRUE),
+ personCor   <- matrix( sapply(data.frame(t(matrix(personCor,ncol=rep))), mean, na.rm=TRUE),
                 ncol=nParameters)
  personCor
  
@@ -194,11 +194,11 @@
  personLL         <- t(matrix(unlist(lapply(tests,extract,4)),ncol=rep))
  results          <- data.frame(Parameter=personParameters, Se=personSe,
                                 LL=personLL)
- round(c(mean=mean(results, na.rm=TRUE)),2); round(c(se=sd(results, na.rm=TRUE)),2)
+ round(c(mean=sapply(results, mean, na.rm=TRUE)),2); round(c(se=sapply(results, sd, na.rm=TRUE)),2)
  ## Average correlation between the person parameters
  nParameters <- length(personParameters[1,])
  personCor   <- unlist(lapply(tests,extract,3))
- personCor   <- matrix( mean(data.frame(t(matrix(personCor,ncol=rep))), na.rm=TRUE),
+ personCor   <- matrix( sapply(data.frame(t(matrix(personCor,ncol=rep))), mean, na.rm=TRUE),
                 ncol=nParameters)
  personCor
  # ....................................................................

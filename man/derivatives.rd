@@ -4,12 +4,15 @@
 \title{ First and Second Derivatives}
 
 \description{
-Three points first and second derivatives numerical approximation used with the \code{m4plEstimateMore} function.
+Three points first and second derivatives numerical approximation used with the
+\code{m4plEstimateMore} function.
  }
 
 \usage{
- fprime( x, FUN = "FP", h = 0.001, names = paste("x", c(1:length(x)), sep = ""))
- fsecond(x, FUN = "FP", h = 0.001, names = paste("x", c(1:length(x)), sep = ""))
+ fprime( x, FUN = "FP", h = 0.001, names = paste("x", c(1:length(x)),
+ sep = ""))
+ fsecond(x, FUN = "FP", h = 0.001, names = paste("x", c(1:length(x)),
+ sep = ""))
  }
 
 \arguments{

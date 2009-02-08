@@ -27,7 +27,7 @@ function(x=ggr4pl(rep=1), rep=1, n=dim(x)[2], N=dim(x)[1], theta=rep(0,N), a=rep
                   xlab="Theta", ylab="Probability", par.strip.text=list(cex=0.80),
                   panel = function(x,y,stats, ..., subscripts) {
                    panel.xyplot(x,y,                       lty="solid",  type="l")
-                   panel.abline(v=mean(stats[subscripts]), lty="dashed", col="red")
+                   panel.abline(v=sapply(stats[subscripts], mean), lty="dashed", col="red")  ##???
                    }
                   )
   }

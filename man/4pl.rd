@@ -11,11 +11,14 @@ two, three and four parameters logistic distributions.
 }
 
 \usage{
-p4pl(theta = 0, a = 1, b = 0, c = 0, d = 1, lower.tail = TRUE, log.p = FALSE)
+p4pl(theta = 0, a = 1, b = 0, c = 0, d = 1, lower.tail = TRUE,
+log.p = FALSE)
 
-d4pl(theta = 0, a = 1, b = 0, c = 0, d = 1,                    log.p = FALSE)
+d4pl(theta = 0, a = 1, b = 0, c = 0, d = 1,
+log.p = FALSE)
 
-q4pl(p  = 0.05, a = 1, b = 0, c = 0, d = 1, lower.tail = TRUE, log.p = FALSE)
+q4pl(p  = 0.05, a = 1, b = 0, c = 0, d = 1, lower.tail = TRUE,
+log.p = FALSE)
 
 r4pl(N  = 100,  a = 1, b = 0, c = 0, d = 1)
 }
@@ -91,11 +94,12 @@ Departement d'education et pedagogie
 # Maximal difference between the two functions: less than 0.01
  max(prob.irt - prob.norm)
  
-# Recovery of the value of the probability of a correct response p4pl() from
-# the quantile value q4pl()
+# Recovery of the value of the probability of a correct response p4pl()
+# from the quantile value q4pl()
  p4pl(theta = q4pl(p = 0.20))
 
-# Recovery of the quantile value from the probability of a correct response
+# Recovery of the quantile value from the probability of a correct
+# response
  q4pl(p=p4pl(theta=3))
 
 # Density Functions [derivative of p4pl()]
@@ -108,7 +112,7 @@ Departement d'education et pedagogie
  lines(theta, dnorm(x = theta, sd = 1.702/a), col = "red", type = "l")
 
 ## Generation of proficiency levels from r4pl() according to a N(0,1)
- data <- (r4pl(N = 10000, a = 1.702, b = 0, c = 0, d = 0))
+ data <- r4pl(N = 10000, a = 1.702, b = 0, c = 0, d = 1)
  c(mean = mean(data), sd = sd(data))
 ## ....................................................................
 }

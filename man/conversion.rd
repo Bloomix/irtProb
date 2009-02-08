@@ -65,10 +65,11 @@ Departement d'education et pedagogie
 \examples{
 ## ....................................................................
 # Values of p and rbis according to de a, b, c and d values
-#  MODEL means that item parameters are from a NORMAL or LOGISTIC model type
+#  MODEL means that item parameters are from a NORMAL or LOGISTIC model
+#  type
  irt2ctt()
  nItems <- 5
- b      <- seq(-3, 3, length=nItems)
+ b      <-  seq(-3, 3, length=nItems)
  a      <-  rep(1, nItems)
  c      <-  rep(0, nItems)
  d      <-  rep(1, nItems)

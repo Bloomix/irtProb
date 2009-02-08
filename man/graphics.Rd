@@ -9,11 +9,11 @@
  
 \usage{
 PCC(theta  = 0, S = 0, C = 0, D = 0,
-    s      = 1/1.702, b = seq(-5, 5, length = 300), c = 0, d = 1,
-    groups = TRUE, ID = "ID",
+    s      = 1/1.702, b = seq(-5, 5, length = 300), c = 0,
+    d = 1, groups = TRUE, ID = "ID",
     main   = "Person Characteristic Curve",
-    xlab   = "Item Difficulty Parameter (b)", ylab = "P(x = 1)",
-    type   = c("g", "a"))
+    xlab   = "Item Difficulty Parameter (b)",
+    ylab = "P(x = 1)", type   = c("g", "a"))
  }
 
 \arguments{
@@ -54,12 +54,14 @@ PCC(theta  = 0, S = 0, C = 0, D = 0,
 \examples{
 ## PCC curves grouped on a single figure
  res1 <- PCC(theta=c(-2,-2,-2),S=0, C=c(0.0, 0.1, 0.6), D=0.2,
-             b=seq(-5,5,length=3000), ID=NULL, groups=TRUE, type=c("g","a"))
+             b=seq(-5,5,length=3000), ID=NULL, groups=TRUE,
+             type=c("g","a"))
  res1
  
 ## PCC curves shingled on a single figure for each subject
  res2 <- PCC(theta=c(-2,-1,0),S=c(4.0,0.0, 1.0), C=c(0.0, 0.1, 0.6), D=0.2,
-             b=seq(-5,5,length=3000), ID=NULL, groups=FALSE, type=c("g","a"))
+             b=seq(-5,5,length=3000), ID=NULL, groups=FALSE,
+             type=c("g","a"))
  res2
  }
 
