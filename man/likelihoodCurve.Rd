@@ -76,6 +76,7 @@
  }
 
 \examples{
+\dontrun{
  ## SIMULATION OF A RESPONSE PATTERN WITH 60 ITEMS
  nItems <- 60
  a      <- rep(1.702,nItems); b <- seq(-4,4,length=nItems)
@@ -110,6 +111,7 @@
  ## Graph of all the likelihood function curves
  groupLikelihoodCurves(test$plotT, test$plotS, test$plotC, test$plotD,
                        main=NULL, cex=0.7)
+ }
  }
 
 \keyword{ multivariate }

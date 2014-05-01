@@ -36,14 +36,15 @@ irt2ctt(a = 1, b = 0, c = 0, d = 1, model = "LOGISTIC")
   \item{irt.parameters }{ numeric; vector returning difficulty \code{b} and discrimination \code{a} parameters from the logistic model.}
   
 \item{For irt2ctt}{...................................}
-  \item{note }{ character; warnings about the use of the \code{c} and \code{d} item parameters.}
-  \item{normal.parameters }{ numeric; vector returning difficulty \code{p} and discrimination \code{rpbis} parameters from the normal model.}
-  \item{irt.parameters }{ numeric; vector returning difficulty \code{p} and discrimination \code{rpbis} parameters from the logistic model.}
+  \item{parameters }{ numeric; vector returning difficulty \code{p} and discrimination \code{rpbis} parameters from the normal model.}
 }
 
 \references{
-Lord, F. M. and Novick, M. R. (1968). \emph{Statistical theories of mental test
-scores, 2nd edition}. Reading, Massacusett: Addison-Wesley.
+Bartholomiew, D. J. (1987). \emph{Latent variable models and factor analysis}. London, U. K.: Charles Griffin and Company.
+
+Lord, F. M. (1980). \emph{Applications of item response theory to practical testing problems}. Mahwah, New Jersey: LEA.
+
+Lord, F. M. and Novick, M. R. (1968). \emph{Statistical theories of mental test scores, 2nd edition}. Reading, Massacusett: Addison-Wesley.
 
 Urry, V. W. (1974). Approximations to item parameters of mental tests models and their uses.
 \emph{Educational and psychological measurement, 34}, 253-269.
@@ -78,16 +79,18 @@ Departement d'education et pedagogie
  irt2ctt(b=b,a=a,c=c,d=d,model="LOGISTIC")
  irt2ctt(b=b,a=a,c=c,d=d,model="NORMAL")
 
-# Values of a and b according p and rpbis
+# Default values of a and b according p and rpbis
  ctt2irt()
  
 # Verification of the recovery of original ctt item parameters
  nItems <- 5
  p      <- seq(0.10, 0.90, length=nItems)
  rpbis  <- seq(0.50, 0.95, length=nItems)
- irt    <- ctt2irt(dif=p,rpbis=rpbis)
- clas   <- irt2ctt(b=irt$normal[2],a=irt$normal[1],model="NORMAL")
- round(c(NORMAL=irt$normal, IRT=irt$irt, CTT=clas$normal), 3)
+ irt    <- ctt2irt(dif=p, rpbis=rpbis)
+ clas   <- irt2ctt(b=irt$irt[6:10], a=irt$irt[1:5], model="LOGISTIC")
+ data.frame(NORMAL=irt$normal, IRT=irt$irt, CTT=clas,ORIGINAL=c(rpbis,p))
+ clas   <- irt2ctt(b=irt$normal[6:10], a=irt$normal[1:5], model="NORMAL")
+ data.frame(NORMAL=irt$normal, IRT=irt$irt, CTT=clas,ORIGINAL=c(rpbis,p))
 ## ....................................................................
 }
 

@@ -66,6 +66,7 @@
  }
 
 \examples{
+\dontrun{
 ## ....................................................................
 # Generation of reponses (0,1) from r4pl() for N subjects (default value of N= 10)
  gr4pl(c = 1)
@@ -100,6 +101,7 @@
  # With TCC for each response pattern
  res    <- pggr4pl(x=x, rep=N, theta=theta,a=a,c=c,d=d,TCC=TRUE); res
 ## ....................................................................
+ }
  }
 
 \keyword{ distribution }

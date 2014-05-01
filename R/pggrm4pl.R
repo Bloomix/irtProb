@@ -9,7 +9,6 @@ function(x=ggrm4pl(rep=1), rep=1, n=dim(x)[2], N=dim(x)[1], theta=rep(0,N), S=0,
  # La fonction rep() permet de s'assurer du bon ordre de theta
  prob        <- data.frame(theta=rep(theta, each=rep), S=S, C=C, D=D, total=rowSums(x), prob=prob)
  if (TCC==TRUE) {
-  require(lattice)
   figure   <- NULL
   simTheta <- seq(-4,4,length=50)
   for (i in 1:N) {

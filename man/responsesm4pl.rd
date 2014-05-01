@@ -7,7 +7,7 @@
 
 \description{
   Simulation of response patterns and computation of the probability of the patterns according
-  to the multidimensional one, two, three and four person parameters logistic item response models.
+  to the multidimensional one, two, three and four person parameters logistic item response models (Raiche et al., 2013).
  }
 
 \usage{
@@ -62,6 +62,8 @@
 
  Magis, D. (2007). Enhanced estimation methods in IRT. \emph{In} D. Magis (Ed.): \emph{Influence, information and item
  response theory in discrete data analysis}. Doctoral dissertation, Liege, Belgium: University de Liege.
+ 
+  Raiche, G., Magis, D., Blais, J.-G., and Brochu, P. (2013). Taking atypical response patterns into account: a multidimensional measurement model from item response theory. In M. Simon, K. Ercikan, and M. Rousseau (Eds), \emph{Improving large-scale assessment in education}. New York, New York: Routledge.
 
  Trabin, T. E., and Weiss, D. J. (1983). The person response curve: fit of individuals to item response
  theory models. \emph{In} D. J. Weiss (Ed.): \emph{New horizons in testing}. New York, NJ: Academic Press.
@@ -81,6 +83,7 @@
  }
 
 \examples{
+\dontrun{
 ## ....................................................................
 # Generation of response patterns (0,1) from r4pl() for N subjects (default value
 # of N = 10)
@@ -117,6 +120,7 @@
  pggrm4pl(theta=3)
  pggrm4pl(n=10, theta=seq(-4,4,length=5), x=ggrm4pl(rep=1), TCC=TRUE)
 ## ....................................................................
+ }
  }
 
 \keyword{ distribution }

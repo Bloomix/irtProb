@@ -36,6 +36,6 @@ export("checkAdequation",
        "rmultinomial",
        "Round"
        )
-
+import(lattice, moments, methods)
 S3method("Round",   "modelShow")
 S3method("summary", "modelShow")

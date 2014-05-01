@@ -1,12 +1,23 @@
         ******************************************************
         *                                                    *
-        *  Changes and Developments in the irtProb Package  *
+        *  Changes and Developments in the irtProb Package   *
         *                                                    *
         ******************************************************
+
+
+------------------------------------------
+- Changes in irtProb 1.2 (2014-02-17) -
+------------------------------------------
+
+  o  Compile for R 3.0.2
+
+  o  Modification of function irt2ctt for changes in if else in base package
+
+  o  Modification of function ctt2irt to correct scaling for irt parameters
+
 
 ------------------------------------------
 - Changes in irtProb 1.1 (2011-12-16) -
 ------------------------------------------
 
   o  The only change was to compile this version for R 2.14.0
-

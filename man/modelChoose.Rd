@@ -6,7 +6,7 @@
 \title{ Functions For Choosing The m4pl Best Model(s) }
 
 \description{
-  Functions to help to choose the best models from the m4pl person response models family.
+  Functions to help to choose the best models from the m4pl person response models family (Raiche et al., 2013).
   The function \code{meanModels} gives the mean of selected and available statistics
   from a \code{m4plModelShow} result. The function \code{modelChoose} shows which
   model(s) are choosen for each subject, while the function \code{modelChooseAdd}
@@ -53,6 +53,8 @@
  Raiche, G., Magis, D. and Blais, J.-G. (2008). \emph{Multidimensional item response theory models integrating additional
  inattention, pseudo-guessing, and discrimination person parameters}. Communication at the annual international
  Psychometric Society meeting, Durham, New Hamshire. Retrieved from \url{http://www.camri.uqam.ca/camri/camriBase/}
+ 
+  Raiche, G., Magis, D., Blais, J.-G., and Brochu, P. (2013). Taking atypical response patterns into account: a multidimensional measurement model from item response theory. In M. Simon, K. Ercikan, and M. Rousseau (Eds), \emph{Improving large-scale assessment in education}. New York, New York: Routledge.
  }
 
 \author{
@@ -66,6 +68,7 @@
 \seealso{ \code{\link{m4plModelShow}} }
 
 \examples{
+\dontrun{
 ## GENERATION OF VECTORS OF RESPONSE
  # NOTE THE USUAL PARAMETRIZATION OF THE ITEM DISCRIMINATION,
  # THE VALUE OF THE PERSONNAL FLUCTUATION FIXED AT 0,
@@ -173,6 +176,7 @@
  mean(XLProficiency$T);sd(XLProficiency$T,na.rm=TRUE);XLProficiency[1:10,]
  meanModels(XLProficiency, statistic=c("LL","BIC","T","SeT","S","C","D"))
  table(XLProficiency$MODEL)
+ }
  }
 
 \keyword{ distribution}

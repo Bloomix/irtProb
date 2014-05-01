@@ -47,6 +47,8 @@
  Raiche, G., Magis, D. and Blais, J.-G. (2008). \emph{Multidimensional item response theory models integrating additional
  inattention, pseudo-guessing, and discrimination person parameters}. Communication at the annual international
  Psychometric Society meeting, Durham, New Hamshire. Retrieved from \url{http://www.camri.uqam.ca/camri/camriBase/}
+ 
+  Raiche, G., Magis, D., Blais, J.-G., and Brochu, P. (2013). Taking atypical response patterns into account: a multidimensional measurement model from item response theory. In M. Simon, K. Ercikan, and M. Rousseau (Eds), \emph{Improving large-scale assessment in education}. New York, New York: Routledge.
  }
 
 \author{
@@ -60,6 +62,7 @@
 \seealso{ \code{\link{m4plPersonParameters}}}
 
 \examples{
+\dontrun{
 ## GENERATION OF VECTORS OF RESPONSES
  # NOTE THE USUAL PARAMETRIZATION OF THE ITEM DISCRIMINATION,
  # THE VALUE OF THE PERSONNAL FLUCTUATION FIXED AT 0,
@@ -95,6 +98,7 @@
 ## first subject
  essai[which(essai$ID == 1 & essai$MODEL == "T"),]$T
        - essai[which(essai$ID == 1 & essai$MODEL == "TSCD"),]$T
+}
 }
 
 \keyword{ distribution }

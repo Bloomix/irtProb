@@ -58,6 +58,7 @@
  }
 
 \examples{
+\dontrun{
 ## Comparison of the results from the multinomial and multinom functions
  x <- c(1,4,9)
  # Values draws
@@ -156,6 +157,7 @@
   text(x=0.60, y=0.80, "Without correction", cex=0.8)
   text(x=0.50, y=0.38, "Without Knowledge of the Correct Model", cex=0.8)
   text(x=0.65, y=0.50, "With Knowledge of the Correct Model", cex=0.8)
+ }
  }
 
 \keyword{ distribution }

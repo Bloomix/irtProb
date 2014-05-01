@@ -6,7 +6,7 @@ function(x,s=1/1.702,b=0,c=0,d=1,m=0,model="T",prior="uniform"){
   if (prior == "uniform") return(dunif(theta,m-4, m+4))
   if (prior == "normal")  return(dnorm(theta,m,1))
   }
- L    <- function(x,m=0,theta,S=0,C=0,D=0,s=0,b=0,c=0,d=1,prior) {
+ L    <- function(x,m=0,theta,S=0,C=0,D=0,s=1/1.702,b=0,c=0,d=1,prior) {
                   -log(priori(theta,m,prior) *
                        prod((pm4pl(theta,S=S,C=C,D=D,s=s,b=b,c=c,d=d))^x *
                        (1-pm4pl(theta,S=S,C=C,D=D,s=s,b=b,c=c,d=d))^(1-x)))
@@ -81,7 +81,7 @@ function(x,s=1/1.702,b=0,c=0,d=1,m=0,model="T",prior="uniform"){
  nParameters   <- length(tse)
  AIC           <-  2*LL - 2*nParameters; BIC <- 2*LL - nParameters*log(length(x))
  logLikelihood <- data.frame(LL,AIC,BIC)
- res           <- list(parameters=res, se=tse, corr=tcorr, logLikelihood=logLikelihood)
+ res           <- list(parameters=res, se=tse, corr=tcorr, logLikelihood=logLikelihood, observeInfo=der2)
  return(res)
  }
  

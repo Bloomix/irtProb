@@ -1,6 +1,6 @@
         ******************************************************
         *                                                    *
-        *  Future Developments for the irtProb Package      *
+        *  Future Developments for the irtProb Package       *
         *                                                    *
         ******************************************************
 
@@ -8,6 +8,10 @@
   o  Multidimensional polytomous models.
 
   o  Add a gui, probably from the fgui package.
+
+  o  Add polytous models (nominal, graded, partial credit, and rating scale).  
+
+  o  Add options for parameters observed and expected information.
 
 
         ******************************************************

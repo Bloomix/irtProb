@@ -40,7 +40,7 @@
  }
 
 \details{
- The multidimensional 4 persons parameters logistic distribution (cdf) is equal to:
+ The multidimensional 4 persons parameters logistic distribution (cdf) (Raiche et al., 2013) is equal to:
   \deqn{
  P(x_{ij}  = 1|\theta _j ,\sigma _j ,\chi _j ,\delta _j ,s_i ,b_i ,c_i ,d_i ) = (\chi _j  + c_i ) + {{(d_i  - \delta _j ) - (\chi _j  + c_i )} \over {1 + e^{{{ - Da_i (\theta _j  - b_i )} \over {\sqrt {\sigma _j^2  + s_i^2 } }}} }}
  }
@@ -71,6 +71,8 @@
  Raiche, G., Magis, D. and Blais, J.-G. (2008). \emph{Multidimensional item response theory models integrating additional
  inattention, pseudo-guessing, and discrimination person parameters}. Communication at the annual international
  Psychometric Society meeting, Durham, New Hamshire. Retrieved from \url{http://www.camri.uqam.ca/camri/camriBase/}
+ 
+  Raiche, G., Magis, D., Blais, J.-G., and Brochu, P. (2013). Taking atypical response patterns into account: a multidimensional measurement model from item response theory. In M. Simon, K. Ercikan, and M. Rousseau (Eds), \emph{Improving large-scale assessment in education}. New York, New York: Routledge.
  }
 
 \author{

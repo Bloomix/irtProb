@@ -64,6 +64,7 @@
 \seealso{ \code{\link{m4plModelShow}} }
 
 \examples{
+\dontrun{
 ## GENERATION OF VECTORS OF RESPONSE
  # NOTE THE USUAL PARAMETRIZATION OF THE ITEM DISCRIMINATION,
  # THE VALUE OF THE PERSONNAL FLUCTUATION FIXED AT 0,
@@ -125,6 +126,7 @@
  # BIC
  summary(resultBIC[which(resultBIC$critBIC == TRUE),]$T)
  sd(resultBIC[which(resultBIC$critBIC == TRUE),]$T, na.rm=TRUE)
+ }
  }
 
 \keyword{ distribution }
